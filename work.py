@@ -43,7 +43,7 @@ class Work:
         pool = Pool()
         MoveLine = pool.get('account.move.line')
         for work, moves in cls.get_cost_moves(works, 'cost_moves').iteritems():
-            moves = MoveLine.browse()
+            moves = MoveLine.browse(moves)
             res[work] = sum(l.debit - l.credit
                 for l in moves if l and not l.reconciliation)
         return res
