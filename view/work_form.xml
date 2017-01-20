@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!-- The COPYRIGHT file at the top level of this repository contains the full
+     copyright notices and license terms. -->
+<data>
+    <xpath expr="/form/notebook/page[@name='invoiced_progress']"
+        position="before">
+        <page name="cost_moves">
+            <field name="cost_moves" colspan="4"/>
+        </page>
+    </xpath>
+
+    <xpath expr="/form/notebook/page/field[@name='invoiced_amount']" position="after">
+      <label name="cost_merited"/>
+      <field name="cost_merited"/>
+    </xpath>
+</data>
