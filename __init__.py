@@ -8,4 +8,5 @@ def register():
     Pool.register(
         work.ProjectSummary,
         work.Work,
+        work.PurchaseLine,
         module='project_management_merited_amounts', type_='model')
