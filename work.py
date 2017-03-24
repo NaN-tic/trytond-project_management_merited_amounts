@@ -40,9 +40,9 @@ class ProjectSummary(UnionMixin, ModelSQL, ModelView):
 
     __name__ = 'project.work.summary'
 
-    revenue_merited = fields.Function(fields.Numeric('Revenue (M)'),
+    revenue_merited = fields.Function(fields.Numeric('Revenue (F)'),
         'get_total')
-    cost_merited = fields.Function(fields.Numeric('Cost (M)'),
+    cost_merited = fields.Function(fields.Numeric('Cost (F)'),
         'get_total')
 
 
