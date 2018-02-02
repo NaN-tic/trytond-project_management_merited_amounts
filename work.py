@@ -9,10 +9,8 @@ from trytond.wizard import Wizard, StateView, StateAction, Button
 from sql import Column
 from trytond.pyson import PYSONEncoder
 
-_ZERO = Decimal('0.0')
-
-
 __all__ = ['Work', 'ProjectSummary', 'PurchaseLine']
+_ZERO = Decimal('0.0')
 
 
 class PurchaseLine:
@@ -37,9 +35,7 @@ class PurchaseLine:
 
 class ProjectSummary(UnionMixin, ModelSQL, ModelView):
     'Project Summary'
-
     __name__ = 'project.work.summary'
-
     revenue_merited = fields.Function(fields.Numeric('Revenue (F)'),
         'get_total')
     cost_merited = fields.Function(fields.Numeric('Cost (F)'),
@@ -49,7 +45,6 @@ class ProjectSummary(UnionMixin, ModelSQL, ModelView):
 class Work:
     __name__ = 'project.work'
     __metaclass__ = PoolMeta
-
     cost_moves = fields.Function(fields.One2Many('account.move.line', None,
         'Cost Move Lines'), 'get_cost_moves')
     cost_merited = fields.Function(fields.Numeric('Cost (M)'),

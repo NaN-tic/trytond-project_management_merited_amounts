@@ -8,7 +8,6 @@
             <field name="cost_moves" colspan="4"/>
         </page>
     </xpath>
-
     <xpath expr="/form/notebook/page/field[@name='invoiced_amount']" position="after">
       <label name="cost_merited"/>
       <field name="cost_merited"/>
